@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DendroIngeniería - Soluciones Forestales Integrales</title>
+    <style>
+        :root {
+            --primary-color: #00a878; /* Verde azulado brillante */
+            --secondary-color: #333333;
+            --light-gray: #f2f2f2;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--white);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hero {
+            height: 500px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('/api/placeholder/1200/500');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-content {
+            width: 50%;
+            z-index: 10;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background-color: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #008c64;
+        }
+        
+        .features {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #666;
+            font-size: 18px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 24px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: var(--secondary-color);
+        }
+        
+        .about {
+            padding: 80px 0;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            font-size: 36px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .about-image {
+            flex: 1;
+            height: 400px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 24px;
+            background-image: url('/api/placeholder/600/400');
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+        }
+        
+        .team {
+            padding: 40px 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background-color: var(--light-gray);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .member-image {
+            height: 250px;
+            background-color: #ddd;
+            background-image: url('/api/placeholder/300/300');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .member-info {
+            padding: 20px;
+        }
+        
+        .member-info h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+        
+        .member-info p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .cta {
+            background-color: var(--primary-color);
+            padding: 80px 0;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-white {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+        
+        .btn-white:hover {
+            background-color: #f2f2f2;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content {
+                width: 60%;
+            }
+            
+            .hero-image {
+                width: 40%;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-text, .about-image {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .hero {
+                height: auto;
+                padding: 80px 0;
+            }
+            
+            .hero-content {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero-image {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Dendro<span>Ingeniería</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Soluciones Forestales Integrales</h1>
+                <p>Innovación al servicio de la producción forestal. Asesoramiento especializado con tecnología de vanguardia para optimizar sus proyectos forestales.</p>
+                <a href="#contacto" class="btn">Contáctenos</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="servicios" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+                <p>Ofrecemos soluciones tecnológicas avanzadas para cada etapa de su proyecto forestal.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">1</div>
+                    <h3>Teledetección Forestal</h3>
+                    <p>Utilizamos sensores remotos satelitales y drones para el análisis y monitoreo preciso de áreas forestales. Identificamos patrones de crecimiento, detectamos anomalías y generamos mapas detallados que permiten una toma de decisiones informada y estratégica.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">2</div>
+                    <h3>Diseño Integral de Proyectos</h3>
+                    <p>Desarrollamos proyectos forestales completos, desde la planificación inicial hasta la implementación. Incluye estudios de factibilidad, selección de especies, diseño de plantaciones, planificación de cosecha y estrategias de manejo sostenible adaptadas a sus objetivos específicos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">3</div>
+                    <h3>Formación Especializada</h3>
+                    <p>Ofrecemos cursos de capacitación para profesionales del sector forestal en el uso de nuevas tecnologías, técnicas avanzadas de silvicultura, manejo forestal sostenible y certificación. Formamos a su equipo para maximizar la eficiencia y productividad de sus operaciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre Nosotros</h2>
+                    <p>Somos una empresa consultora y de servicios, con diez años de experiencia en el sector forestal de Misiones y Corrientes, y con clientes establecidos en Paraguay y Uruguay. Brindamos una amplia gama de servicios relacionados con la generación de conocimiento, la innovación y la aplicación de tecnología para la resolución de los desafíos que presenta la silvicultura y la cosecha.</p>
+                    <p>En DendroIngeniería combinamos el conocimiento técnico forestal con las últimas tecnologías en teledetección y análisis de datos. Nuestro enfoque multidisciplinario nos permite ofrecer soluciones personalizadas y efectivas para las diversas necesidades del sector forestal.</p>
+                    <p>Nos distinguimos por nuestro compromiso con la sostenibilidad ambiental y la innovación tecnológica. Trabajamos estrechamente con nuestros clientes para desarrollar estrategias que maximicen la productividad y rentabilidad mientras preservan los recursos naturales para las generaciones futuras.</p>
+                </div>
+                <div class="about-image"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestro Equipo</h2>
+                <p>Profesionales apasionados y altamente calificados en ciencias forestales y tecnología aplicada.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <div class="member-info">
+                        <h3>Dr. Eduardo Hildt</h3>
+                        <p>Ingeniero Forestal</p>
+                        <p>Especialista en teledetección y sistemas de información geográfica aplicados a la gestión forestal. Cuenta con amplia experiencia en el desarrollo de metodologías innovadoras para el monitoreo y análisis de recursos forestales.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <div class="member-info">
+                        <h3>Francisco Somma Ferrando</h3>
+                        <p>Ingeniero Forestal</p>
+                        <p>Experto en planificación y diseño de proyectos forestales sostenibles. Su enfoque integra aspectos técnicos, ambientales y económicos para desarrollar soluciones optimizadas para cada cliente.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <div class="member-info">
+                        <h3>Gustavo Hildt</h3>
+                        <p>Técnico Agropecuario</p>
+                        <p>Especializado en trabajo de campo y relevamientos forestales. Su conocimiento práctico y experiencia en el terreno son fundamentales para la implementación efectiva de nuestros proyectos y servicios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <div class="container">
+            <h2>Transforme su proyecto forestal</h2>
+            <p>Combinar la tradición forestal con tecnologías innovadoras es el camino hacia una silvicultura más productiva y sostenible. Descubra cómo podemos ayudarle a optimizar sus recursos y maximizar sus resultados.</p>
+            <a href="#contacto" class="btn btn-white">Solicitar asesoramiento</a>
+        </div>
+    </section>
+    
+    <section id="contacto" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+                <p>Estamos a su disposición para responder a cualquier consulta y explorar cómo podemos colaborar en su proyecto.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Información de contacto</h3>
+                    <p><strong>Email:</strong> eduardo.hildt@dendroingenieria.com</p>
+                    <p><strong>Ubicación:</strong> Misiones - Corrientes, Argentina</p>
+                    <p><strong>Horario:</strong> Lunes a Viernes, 8:00 - 17:00</p>
+                    <p><strong>Áreas de servicio:</strong> Argentina (Misiones, Corrientes), Paraguay, Uruguay</p>
+                </div>
+                <div style="flex: 1; background-color: #f2f2f2; padding: 30px; border-radius: 5px;">
+                    <h3 style="margin-bottom: 20px;">Envíenos un mensaje</h3>
+                    <form>
+                        <div style="margin-bottom: 15px;">
+                            <input type="text" placeholder="Nombre" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <input type="email" placeholder="Email" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <input type="text" placeholder="Asunto" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <textarea placeholder="Mensaje" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; height: 150px;"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="border: none; cursor: pointer; width: 100%;">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>DendroIngeniería</h3>
+                    <p>Soluciones Forestales Integrales desde 2015</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#">Teledetección</a></li>
+                        <li><a href="#">Diseño de proyectos</a></li>
+                        <li><a href="#">Formación</a></li>
+                        <li><a href="#">Inventarios forestales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Especializaciones</h3>
+                    <ul>
+                        <li><a href="#">Sensores remotos</a></li>
+                        <li><a href="#">Monitoreo de cosecha</a></li>
+                        <li><a href="#">Proyectos de carbono</a></li>
+                        <li><a href="#">Certificación</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DendroIngeniería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling para links de navegación
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Formulario (sólo para demostración)
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Mensaje enviado correctamente. Este es un prototipo, por lo que el formulario no envía datos realmente.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
