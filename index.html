@@ -113,17 +113,23 @@
                     <div class="slide" style="background-image: url('images/sobre_nosotros_slide/img_2.jpg');"></div>
                     <div class="slide" style="background-image: url('images/sobre_nosotros_slide/img_3.jpg');"></div>
                     <div class="slide" style="background-image: url('images/sobre_nosotros_slide/img_4.jpg');"></div>
+                    <div class="slide" style="background-image: url('images/sobre_nosotros_slide/img_5.jpg');"></div>
+                    <div class="slide" style="background-image: url('images/sobre_nosotros_slide/img_6.jpg');"></div>
+                    <div class="slide" style="background-image: url('images/sobre_nosotros_slide/img_7.jpg');"></div>
+                    <div class="slide" style="background-image: url('images/sobre_nosotros_slide/img_8.jpg');"></div>
+                    <div class="slide" style="background-image: url('images/sobre_nosotros_slide/img_9.jpg');"></div>
+                    <div class="slide" style="background-image: url('images/sobre_nosotros_slide/img_10.jpg');"></div>
                     <!-- Puedes añadir más slides según necesites -->
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="team">
+    <section id="team" class="team">
         <div class="container">
             <div class="section-title">
                 <h2>El equipo</h2>
-                <p>Profesionales apasionados y altamente calificados en ciencias forestales y tecnología aplicada.</p>
+                <p>Somos un grupo de profesionales dedicados a la aplicación de enfoques novedosos para afrontar los desafíos de la producción forestal y la conservación.</p>
             </div>
             <div class="team-grid">
                 <div class="team-member">
@@ -158,7 +164,7 @@
     
     <section class="cta">
         <div class="container">
-            <h2>Transforme su proyecto forestal</h2>
+            <h2>Soluciones inteligentes para los desafíos forestales</h2>
             <p>Combinar la tradición forestal con tecnologías innovadoras es el camino hacia una silvicultura más productiva y sostenible. Descubra cómo podemos ayudarle a optimizar sus recursos y maximizar sus resultados.</p>
             <a href="#contacto" class="btn btn-white">Solicitar asesoramiento</a>
         </div>
@@ -178,20 +184,33 @@
                     <p><strong>Ubicación:</strong> Mercedes - Corrientes, Argentina</p>
                     <p><strong>Horario:</strong> Lunes a Viernes, 8:00 - 16:00</p>
                 </div>
+
                 <div style="flex: 1; background-color: #f2f2f2; padding: 30px; border-radius: 5px;">
                     <h3 style="margin-bottom: 20px;">Envíenos un mensaje</h3>
-                    <form id="contactForm">
+                    <form action="https://formsubmit.co/eduardo.hildt@dendroingenieria.com" method="POST">
+
+                        <!-- Honeypot anti-spam -->
+                        <input type="text" name="_honey" style="display:none">
+                        <!-- Evita que aparezca captcha de Formsubmit -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Redireccionar luego del envío (opcional) -->
+                        <!--<input type="hidden" name="_next" value="https://tusitio.com/gracias.html"> -->
+
                         <div style="margin-bottom: 15px;">
-                            <input type="text" placeholder="Nombre" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                            <input type="text" name="name" placeholder="Nombre" required
+                                style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
                         </div>
                         <div style="margin-bottom: 15px;">
-                            <input type="email" placeholder="Email" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                            <input type="email" name="email" placeholder="Email" required
+                                style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
                         </div>
                         <div style="margin-bottom: 15px;">
-                            <input type="text" placeholder="Asunto" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                            <input type="text" name="subject" placeholder="Asunto"
+                                style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
                         </div>
                         <div style="margin-bottom: 15px;">
-                            <textarea placeholder="Mensaje" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; height: 150px;"></textarea>
+                            <textarea name="message" placeholder="Mensaje" required
+                                    style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; height: 150px;"></textarea>
                         </div>
                         <button type="submit" class="btn" style="border: none; cursor: pointer; width: 100%;">Enviar mensaje</button>
                     </form>
@@ -237,6 +256,12 @@
                 <p>&copy; 2025 DendroIngeniería. Todos los derechos reservados.</p>
             </div>
         </div>
+        <a href="https://wa.me/543773540155"
+            class="whatsapp-float"
+            target="_blank"
+            aria-label="Chatear por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </footer>
 
     <script>
@@ -251,15 +276,6 @@
                     });
                 });
             });
-            
-            // Formulario (sólo para demostración)
-            const form = document.querySelector('#contactForm');
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    alert('Mensaje enviado correctamente. Este es un prototipo, por lo que el formulario no envía datos realmente.');
-                });
-            }
         });
     </script>
     <script>
@@ -298,5 +314,6 @@
             setupGallery();
         });
     </script>
+
 </body>
 </html>
