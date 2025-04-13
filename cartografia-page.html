@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartografía y Análisis Espacial - DendroIngeniería</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        // Script para el pase de fotografías
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[index].classList.add('active');
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Mostrar la primera diapositiva
+            showSlide(0);
+            
+            // Cambiar diapositivas cada 5 segundos
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Dendro<span>Ingeniería</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#servicios">Servicios</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section class="service-banner">
+        <div class="container">
+            <div class="service-banner-content">
+                <h1>Cartografía y Análisis Espacial</h1>
+                <p>Soluciones SIG y gemelos digitales para la gestión forestal avanzada</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="service-detail">
+        <div class="container">
+            <a href="index.html#servicios" class="back-link"><i class="fas fa-arrow-left"></i> Volver a Servicios</a>
+            
+            <div class="service-content">
+                <div class="service-main">
+                    <h2>Transforme su gestión con información geoespacial precisa</h2>
+                    
+                    <p>En DendroIngeniería, desarrollamos soluciones cartográficas y de análisis espacial que permiten visualizar, analizar y gestionar eficientemente la información geográfica de sus predios forestales. Nuestros servicios de Sistemas de Información Geográfica (SIG) y gemelos digitales proporcionan representaciones virtuales precisas de sus bosques y terrenos.</p>
+                    
+                    <p>Utilizamos tecnologías de vanguardia como drones, GPS de alta precisión y software especializado para recopilar y procesar datos espaciales que le ayudarán a tomar decisiones informadas y optimizar sus operaciones forestales.</p>
+
+                    <div class="service-features">
+                        <h3>Nuestras soluciones de cartografía y análisis espacial</h3>
+                        <div class="service-feature-list">
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">1</div>
+                                <div>
+                                    <h4>Relevamiento topográfico aerofotogramétrico</h4>
+                                    <p>Realizamos levantamientos topográficos de alta precisión utilizando drones y aeronaves equipadas con sensores especializados, apoyados por puntos de control GNSS en terreno. Esta metodología permite generar modelos digitales del terreno (MDT) y modelos digitales de superficie (MDS) con una precisión centimétrica, fundamentales para la planificación de cualquier proyecto forestal.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">2</div>
+                                <div>
+                                    <h4>Relevamiento GNSS para infraestructuras</h4>
+                                    <p>Utilizamos equipos GNSS (Sistema Global de Navegación por Satélite) de alta precisión para medir con exactitud el nivel del terreno. Estos datos son esenciales para el cálculo y diseño de infraestructuras y redes de riego y drenaje, garantizando que las obras hidráulicas funcionen eficientemente y previniendo problemas de erosión o anegamiento.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">3</div>
+                                <div>
+                                    <h4>Levantamiento de estructuras existentes</h4>
+                                    <p>Documentamos detalladamente todas las estructuras presentes en el campo, incluyendo redes de caminos, áreas de bosque nativo y plantaciones forestales. Este inventario espacial completo permite tener una visión integral del predio y facilita la planificación de nuevas intervenciones, respetando las características existentes del terreno.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">4</div>
+                                <div>
+                                    <h4>Estimación de volumen de materiales</h4>
+                                    <p>Mediante relevamientos aerofotogramétricos y puntos de control GNSS, calculamos con precisión el volumen de pilas de trozas, chips o biomasa. Esta información es crucial para la gestión de inventarios, la logística y la comercialización de productos forestales, permitiendo conocer exactamente la cantidad de material disponible sin necesidad de mediciones manuales.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">5</div>
+                                <div>
+                                    <h4>Sistemas de Información Geográfica personalizados</h4>
+                                    <p>Diseñamos y desarrollamos Sistemas de Información Geográfica (SIG) a medida, adaptados a las necesidades específicas de cada cliente. Estos sistemas integran información espacial con bases de datos, permitiendo analizar, visualizar y gestionar todos los aspectos espaciales de la operación forestal desde una plataforma unificada y de fácil acceso.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">6</div>
+                                <div>
+                                    <h4>Cartografía detallada</h4>
+                                    <p>Elaboramos mapas y planos detallados tanto en formato físico como digital. Nuestra cartografía se caracteriza por su precisión, claridad y funcionalidad, proporcionando herramientas de visualización adaptadas a distintos usuarios y necesidades operativas, desde mapas para trabajo de campo hasta presentaciones ejecutivas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Galería de imágenes -->
+                    <div id="gallery-slideshow" style="height: 350px; margin: 40px 0; border-radius: 5px; overflow: hidden;">
+                        <div class="slide active" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                        <div class="slide" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                        <div class="slide" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                        <div class="slide" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                    </div>
+
+                    <div class="service-cta">
+                        <h3>¿Necesita mejorar sus capacidades de análisis espacial?</h3>
+                        <p>Nuestro equipo está listo para desarrollar soluciones cartográficas personalizadas que optimicen la gestión de sus áreas forestales.</p>
+                        <a href="index.html#contacto" class="btn">Solicitar información</a>
+                    </div>
+                </div>
+                
+                <div class="service-sidebar">
+                    <h3>Ventajas de nuestros servicios de SIG</h3>
+                    <p>La aplicación de tecnologías geoespaciales avanzadas en el sector forestal proporciona numerosos beneficios:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Optimización en la toma de decisiones</li>
+                        <li>Mayor precisión en la planificación</li>
+                        <li>Reducción de costos operativos</li>
+                        <li>Monitoreo efectivo del patrimonio</li>
+                        <li>Mejor gestión de riesgos</li>
+                        <li>Trazabilidad completa de operaciones</li>
+                    </ul>
+                    
+                    <h3>Tecnologías utilizadas</h3>
+                    <p>Trabajamos con equipamiento y software de última generación:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Drones con sensores multiespectrales</li>
+                        <li>Receptores GNSS RTK/PPK</li>
+                        <li>Software de fotogrametría y LiDAR</li>
+                        <li>Plataformas SIG avanzadas</li>
+                        <li>Sistemas de modelado 3D</li>
+                        <li>Herramientas de análisis espacial</li>
+                    </ul>
+                    
+                    <h3>Aplicaciones prácticas</h3>
+                    <p>Nuestras soluciones son ideales para:</p>
+                    <ul style="margin-left: 20px;">
+                        <li>Planificación de cosecha forestal</li>
+                        <li>Diseño de redes de caminos</li>
+                        <li>Manejo de cuencas hidrográficas</li>
+                        <li>Estudios de impacto ambiental</li>
+                        <li>Inventarios forestales</li>
+                        <li>Certificación forestal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>DendroIngeniería</h3>
+                    <ul>
+                        <li><a href="index.html#nosotros">Sobre nosotros</a></li>
+                        <li><a href="index.html#equipo">Nuestro equipo</a></li>
+                        <li><a href="#">Trabajos realizados</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="planificacion-page.html">Forestación de precisión</a></li>
+                        <li><a href="cartografia-page.html">Cartografía y Análisis Espacial</a></li>
+                        <li><a href="monitoreo-page.html">Monitoreo de Plantaciones</a></li>
+                        <li><a href="operaciones-page.html">Optimización de Operaciones</a></li>
+                        <li><a href="proyectos-ambientales-page.html">Proyectos Ambientales y Captura de Carbono</a></li>
+                        <li><a href="formacion-page.html">Formación y Capacitación</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="mailto:info@dendroingenieria.com">info@dendroingenieria.com</a></li>
+                        <li><a href="tel:+5491112345678">+54 3773 540155</a></li>
+                        <li>Mercedes - Corrientes, Argentina</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 DendroIngeniería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

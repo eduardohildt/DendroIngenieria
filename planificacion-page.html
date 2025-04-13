@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forestación de Precisión - DendroIngeniería</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        // Script para el pase de fotografías
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[index].classList.add('active');
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Mostrar la primera diapositiva
+            showSlide(0);
+            
+            // Cambiar diapositivas cada 5 segundos
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Dendro<span>Ingeniería</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#servicios">Servicios</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section class="service-banner">
+        <div class="container">
+            <div class="service-banner-content">
+                <h1>Forestación de Precisión</h1>
+                <p>Planificación y evaluación inicial para optimizar sus proyectos forestales</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="service-detail">
+        <div class="container">
+            <a href="index.html#servicios" class="back-link"><i class="fas fa-arrow-left"></i> Volver a Servicios</a>
+            
+            <div class="service-content">
+                <div class="service-main">
+                    <h2>Planificación estratégica para una silvicultura moderna</h2>
+                    
+                    <p>En DendroIngeniería entendemos que el éxito de un proyecto forestal comienza con una planificación adecuada y una evaluación exhaustiva del terreno. Nuestra metodología de Forestación de Precisión combina tecnologías de vanguardia con el conocimiento técnico forestal para optimizar cada etapa del proceso.</p>
+                    
+                    <p>A través de nuestros servicios de planificación y evaluación inicial, le ayudamos a tomar decisiones informadas, maximizando la productividad de sus plantaciones y minimizando riesgos e imprevistos.</p>
+                    
+                    <div class="service-features">
+                        <h3>Nuestros servicios de planificación y evaluación inicial</h3>
+                        <div class="service-feature-list">
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">1</div>
+                                <div>
+                                    <h4>Evaluación y ambientación de campo</h4>
+                                    <p>Analizamos y clasificamos la superficie de su campo para identificar los diferentes ambientes con aptitud forestal. Este proceso permite optimizar el uso del terreno y definir estrategias de manejo específicas para cada zona, maximizando el potencial productivo.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">2</div>
+                                <div>
+                                    <h4>Relevamientos a campo de suelos</h4>
+                                    <p>Realizamos estudios detallados de las características físicas y químicas del suelo, incluyendo compactación, estabilidad de agregados, conductividad y pH. Esta información es clave para complementar el proceso de ambientación y seleccionar las especies y técnicas de manejo más adecuadas.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">3</div>
+                                <div>
+                                    <h4>Identificación de áreas inundables</h4>
+                                    <p>Mediante tecnologías de teledetección y análisis topográfico, identificamos zonas propensas a inundaciones o con problemas de anegamiento. Este análisis previene pérdidas económicas significativas y contribuye a una planificación más efectiva de la forestación.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">4</div>
+                                <div>
+                                    <h4>Evaluación de limitaciones físicas y químicas</h4>
+                                    <p>Identificamos factores limitantes para el desarrollo forestal, como capas compactadas, napa freática elevada, salinidad o deficiencias nutricionales. Estos datos son fundamentales para tomar decisiones sobre la viabilidad y el manejo específico requerido en cada área.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">5</div>
+                                <div>
+                                    <h4>Relevamientos aéreos de cubiertas verdes</h4>
+                                    <p>Utilizamos drones y sensores especializados para monitorear cubiertas verdes y detectar proliferación de malezas. Este servicio permite identificar tempranamente problemas de competencia y optimizar las estrategias de control de vegetación indeseable.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">6</div>
+                                <div>
+                                    <h4>Diseño de la estructura espacial</h4>
+                                    <p>Desarrollamos planes detallados para la distribución óptima de rodales, caminos, vías de saca, obras de ingeniería y cortafuegos. Un diseño adecuado facilita la gestión eficiente del bosque, optimiza las operaciones forestales y contribuye a la protección contra incendios.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">7</div>
+                                <div>
+                                    <h4>Optimización de red de caminos</h4>
+                                    <p>Evaluamos y ajustamos la red de caminos forestales para equilibrar el costo de la cosecha con el costo del mantenimiento. Una red de caminos bien diseñada reduce los costos logísticos, minimiza el impacto ambiental y mejora la accesibilidad durante todo el año.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">8</div>
+                                <div>
+                                    <h4>Análisis económico y financiero</h4>
+                                    <p>Realizamos evaluaciones financieras completas de proyectos forestales, incluyendo análisis de inversión, proyecciones de flujo de caja, retorno de la inversión y análisis de sensibilidad. Esta información es esencial para la toma de decisiones estratégicas y la obtención de financiamiento.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Galería de imágenes -->
+                    <div id="gallery-slideshow" style="height: 350px; margin: 40px 0; border-radius: 5px; overflow: hidden;">
+                        <div class="slide active" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                        <div class="slide" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                        <div class="slide" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                        <div class="slide" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                    </div>
+
+                    <div class="service-cta">
+                        <h3>¿Está pensando en desarrollar un proyecto forestal?</h3>
+                        <p>Contacte con nuestro equipo de expertos para una evaluación inicial personalizada de su terreno y necesidades.</p>
+                        <a href="index.html#contacto" class="btn">Solicitar información</a>
+                    </div>
+                </div>
+                
+                <div class="service-sidebar">
+                    <h3>¿Por qué elegir la forestación de precisión?</h3>
+                    <p>La forestación de precisión representa un enfoque moderno para maximizar la productividad y sostenibilidad de los proyectos forestales. Al implementar técnicas avanzadas de evaluación y planificación, es posible:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Reducir costos operativos</li>
+                        <li>Aumentar rendimientos</li>
+                        <li>Minimizar impactos ambientales</li>
+                        <li>Optimizar el uso de recursos</li>
+                        <li>Mejorar la calidad del producto final</li>
+                    </ul>
+                    
+                    <h3>Tecnologías aplicadas</h3>
+                    <p>En nuestros servicios utilizamos:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Sistemas de información geográfica (GIS)</li>
+                        <li>Imágenes satelitales multiespectrales</li>
+                        <li>Drones con sensores especializados</li>
+                        <li>Software de análisis financiero forestal</li>
+                        <li>Equipos de medición de suelos</li>
+                    </ul>
+                    
+                    <h3>Nuestros clientes</h3>
+                    <p>Trabajamos con:</p>
+                    <ul style="margin-left: 20px;">
+                        <li>Empresas forestales</li>
+                        <li>Productores agropecuarios</li>
+                        <li>Inversores institucionales</li>
+                        <li>Propietarios de tierras</li>
+                        <li>Gestores de patrimonio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>DendroIngeniería</h3>
+                    <ul>
+                        <li><a href="index.html#nosotros">Sobre nosotros</a></li>
+                        <li><a href="index.html#equipo">Nuestro equipo</a></li>
+                        <li><a href="#">Trabajos realizados</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="planificacion-page.html">Forestación de precisión</a></li>
+                        <li><a href="cartografia-page.html">Cartografía y Análisis Espacial</a></li>
+                        <li><a href="monitoreo-page.html">Monitoreo de Plantaciones</a></li>
+                        <li><a href="operaciones-page.html">Optimización de Operaciones</a></li>
+                        <li><a href="proyectos-ambientales-page.html">Proyectos Ambientales y Captura de Carbono</a></li>
+                        <li><a href="formacion-page.html">Formación y Capacitación</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="mailto:info@dendroingenieria.com">info@dendroingenieria.com</a></li>
+                        <li><a href="tel:+5491112345678">+54 3773 540155</a></li>
+                        <li>Mercedes - Corrientes, Argentina</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 DendroIngeniería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

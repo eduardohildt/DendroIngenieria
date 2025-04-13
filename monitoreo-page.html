@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo y Análisis de Plantaciones - DendroIngeniería</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        // Script para el pase de fotografías
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[index].classList.add('active');
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Mostrar la primera diapositiva
+            showSlide(0);
+            
+            // Cambiar diapositivas cada 5 segundos
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Dendro<span>Ingeniería</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#servicios">Servicios</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section class="service-banner">
+        <div class="container">
+            <div class="service-banner-content">
+                <h1>Monitoreo y Análisis de Plantaciones</h1>
+                <p>Soluciones integrales para la evaluación y seguimiento de recursos forestales</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="service-detail">
+        <div class="container">
+            <a href="index.html#servicios" class="back-link"><i class="fas fa-arrow-left"></i> Volver a Servicios</a>
+            
+            <div class="service-content">
+                <div class="service-main">
+                    <h2>Evaluación precisa para una gestión forestal eficiente</h2>
+                    
+                    <p>En DendroIngeniería ofrecemos servicios especializados para el monitoreo y análisis de plantaciones forestales, combinando técnicas avanzadas de teledetección con metodologías tradicionales de inventario en campo. Esta aproximación integral nos permite proporcionar información precisa y actualizada sobre el estado, crecimiento y potencial productivo de sus recursos forestales.</p>
+                    
+                    <p>Nuestro enfoque dual, que combina análisis espacial e inventarios forestales detallados, proporciona una visión completa de sus plantaciones, permitiendo tomar decisiones fundamentadas para maximizar la rentabilidad y sostenibilidad de sus inversiones forestales.</p>
+                    
+
+                    
+                    <div class="service-features">
+                        <h3>Análisis espacial de plantaciones forestales</h3>
+                        <div class="service-feature-list">
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">1</div>
+                                <div>
+                                    <h4>Delimitación de superficie forestal efectiva</h4>
+                                    <p>Establecemos límites precisos de los rodales forestales mediante tecnologías geoespaciales avanzadas, permitiendo conocer con exactitud la superficie efectiva plantada. Este servicio incluye la estratificación de forestaciones heterogéneas, identificando zonas con diferentes características para una gestión más específica y eficiente.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">2</div>
+                                <div>
+                                    <h4>Análisis de rodales afectados</h4>
+                                    <p>Evaluamos y delimitamos con precisión las áreas afectadas por enfermedades, plagas o incendios forestales. Mediante técnicas de teledetección determinamos no solo la extensión del daño sino también su severidad, permitiendo priorizar intervenciones y establecer estrategias de recuperación adecuadas a cada situación.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">3</div>
+                                <div>
+                                    <h4>Estimación de altura y densidad</h4>
+                                    <p>Utilizamos drones equipados con sensores especializados para realizar relevamientos aerofotogramétricos que permiten estimar la altura de los árboles y la densidad de las plantaciones. Estos parámetros son fundamentales para evaluar el desarrollo de la forestación y proyectar su crecimiento futuro.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">4</div>
+                                <div>
+                                    <h4>Análisis LiDAR y modelización</h4>
+                                    <p>Procesamos y analizamos datos LiDAR (Light Detection and Ranging) para obtener información detallada sobre la estructura vertical y horizontal del bosque. A partir de estos datos, modelizamos variables dasométricas clave como altura dominante, área basal y volumen, con un nivel de precisión superior a los métodos tradicionales.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">5</div>
+                                <div>
+                                    <h4>Seguimiento de plantaciones iniciales</h4>
+                                    <p>Monitoreamos el establecimiento y desarrollo temprano de las plantaciones forestales, evaluando parámetros críticos como la supervivencia, altura y tamaño de copa. Este seguimiento permite detectar problemas en fases iniciales y tomar medidas correctivas oportunas para asegurar el éxito de la forestación.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">6</div>
+                                <div>
+                                    <h4>Cobertura de copas en sistemas silvopastoriles</h4>
+                                    <p>Determinamos con precisión el porcentaje de cobertura de copas en sistemas silvopastoriles mediante relevamientos aerofotogramétricos con drones. Esta información es esencial para el manejo equilibrado de estos sistemas, optimizando tanto la producción forestal como la ganadera.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-features">
+                        <h3>Inventarios y análisis de plantaciones forestales</h3>
+                        <div class="service-feature-list">
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">1</div>
+                                <div>
+                                    <h4>Inventarios silvícolas</h4>
+                                    <p>Realizamos inventarios completos para estimar las principales características dasométricas de sus bosques implantados, incluyendo densidad, área basal, diámetro medio, altura dominante, volumen medio por árbol y volumen total por hectárea. Estos parámetros son fundamentales para evaluar el estado actual de la plantación y planificar su manejo futuro.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">2</div>
+                                <div>
+                                    <h4>Inventarios forestales pre-comerciales</h4>
+                                    <p>Evaluamos plantaciones próximas a la cosecha para determinar con precisión sus características dasométricas, volumen comercial disponible y stock de productos potenciales según diferentes esquemas de trozado. Esta información es crucial para planificar la cosecha y optimizar el rendimiento económico de la operación.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">3</div>
+                                <div>
+                                    <h4>Análisis comparativo de esquemas de manejo</h4>
+                                    <p>Mediante simulaciones de crecimiento, comparamos diferentes escenarios de manejo silvícola considerando variables como intensidad y oportunidad de raleos, turnos de corta y esquemas de trozado. Este análisis permite identificar la estrategia óptima para maximizar el retorno económico de la inversión forestal.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">4</div>
+                                <div>
+                                    <h4>Medición de parcelas permanentes</h4>
+                                    <p>Establecemos y medimos periódicamente parcelas permanentes para monitorear el crecimiento de las plantaciones a lo largo del tiempo. Estos datos son invaluables para el desarrollo de ecuaciones alométricas locales, la evaluación del desempeño de diferentes materiales genéticos y la validación de modelos de crecimiento.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">5</div>
+                                <div>
+                                    <h4>Diseño de ensayos silvícolas</h4>
+                                    <p>Planificamos y establecemos ensayos silvícolas científicamente robustos para la evaluación de materiales genéticos o la comparación de diferentes esquemas de manejo. Estos ensayos proveen información objetiva y estadísticamente válida para fundamentar decisiones estratégicas en el manejo forestal.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Galería de imágenes -->
+                    <div id="gallery-slideshow" style="height: 350px; margin: 40px 0; border-radius: 5px; overflow: hidden;">
+                        <div class="slide active" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                        <div class="slide" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                        <div class="slide" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                        <div class="slide" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                    </div>
+
+                    <div class="service-cta">
+                        <h3>¿Necesita conocer con precisión el potencial de sus recursos forestales?</h3>
+                        <p>Contacte con nuestro equipo para diseñar un programa de monitoreo y análisis adaptado a sus necesidades específicas.</p>
+                        <a href="index.html#contacto" class="btn">Solicitar información</a>
+                    </div>
+                </div>
+                
+                <div class="service-sidebar">
+                    <h3>Beneficios de nuestros servicios</h3>
+                    <p>Un programa integral de monitoreo y análisis forestal le permite:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Conocer con precisión el valor de su patrimonio forestal</li>
+                        <li>Detectar tempranamente problemas sanitarios</li>
+                        <li>Optimizar las intervenciones silvícolas</li>
+                        <li>Planificar eficientemente las operaciones de cosecha</li>
+                        <li>Fundamentar decisiones de compra-venta</li>
+                        <li>Evaluar objetivamente el desempeño de la gestión</li>
+                    </ul>
+                    
+                    <h3>Metodologías aplicadas</h3>
+                    <p>Nuestros servicios combinan:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Diseño estadístico robusto</li>
+                        <li>Tecnologías de teledetección</li>
+                        <li>Inventarios forestales sistemáticos</li>
+                        <li>Modelos de crecimiento validados</li>
+                        <li>Análisis espacial avanzado</li>
+                        <li>Procesamiento digital de imágenes</li>
+                    </ul>
+                    
+                    <h3>Equipamiento especializado</h3>
+                    <p>Trabajamos con instrumentos de alta precisión:</p>
+                    <ul style="margin-left: 20px;">
+                        <li>Forcípulas digitales</li>
+                        <li>Hipsómetros láser</li>
+                        <li>Barrenos de incremento</li>
+                        <li>Drones con sensores multiespectrales</li>
+                        <li>Receptores GNSS submétricos</li>
+                        <li>Dendrómetros electrónicos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>DendroIngeniería</h3>
+                    <ul>
+                        <li><a href="index.html#nosotros">Sobre nosotros</a></li>
+                        <li><a href="index.html#equipo">Nuestro equipo</a></li>
+                        <li><a href="#">Trabajos realizados</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="planificacion-page.html">Forestación de precisión</a></li>
+                        <li><a href="cartografia-page.html">Cartografía y Análisis Espacial</a></li>
+                        <li><a href="monitoreo-page.html">Monitoreo de Plantaciones</a></li>
+                        <li><a href="operaciones-page.html">Optimización de Operaciones</a></li>
+                        <li><a href="proyectos-ambientales-page.html">Proyectos Ambientales y Captura de Carbono</a></li>
+                        <li><a href="formacion-page.html">Formación y Capacitación</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="mailto:info@dendroingenieria.com">info@dendroingenieria.com</a></li>
+                        <li><a href="tel:+5491112345678">+54 3773 540155</a></li>
+                        <li>Mercedes - Corrientes, Argentina</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 DendroIngeniería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

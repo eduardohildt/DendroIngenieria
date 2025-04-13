@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formación y Capacitación - DendroIngeniería</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        // Script para el pase de fotografías
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[index].classList.add('active');
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Mostrar la primera diapositiva
+            showSlide(0);
+            
+            // Cambiar diapositivas cada 5 segundos
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Dendro<span>Ingeniería</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#servicios">Servicios</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section class="service-banner">
+        <div class="container">
+            <div class="service-banner-content">
+                <h1>Formación y Capacitación</h1>
+                <p>Desarrollo de capacidades técnicas y profesionales para el sector forestal del siglo XXI</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="service-detail">
+        <div class="container">
+            <a href="index.html#servicios" class="back-link"><i class="fas fa-arrow-left"></i> Volver a Servicios</a>
+            
+            <div class="service-content">
+                <div class="service-main">
+                    <h2>Potenciando el capital humano para la innovación forestal</h2>
+                    
+                    <p>En DendroIngeniería entendemos que la adopción de nuevas tecnologías y metodologías en el sector forestal requiere no solo herramientas avanzadas, sino también personas capacitadas para utilizarlas eficientemente. Por ello, ofrecemos programas de formación y capacitación diseñados específicamente para las necesidades del sector forestal, combinando sólidos fundamentos teóricos con un enfoque eminentemente práctico.</p>
+                    
+                    <p>Nuestros cursos son impartidos por profesionales con amplia experiencia tanto en el ámbito académico como en la aplicación práctica de tecnologías en entornos forestales reales. Adaptamos cada programa formativo a las necesidades específicas de su organización, desde capacitaciones técnicas para operarios hasta formación especializada para profesionales y directivos.</p>
+
+                    <div class="service-features">
+                        <h3>Formación en tecnologías avanzadas</h3>
+                        <div class="service-feature-list">
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">1</div>
+                                <div>
+                                    <h4>Empleo de drones para relevamientos aerofotogramétricos</h4>
+                                    <p>Capacitamos a su personal en la planificación, ejecución y procesamiento de relevamientos aerofotogramétricos con drones. El programa abarca desde los fundamentos de la fotogrametría y la teledetección hasta aspectos prácticos como la configuración de misiones de vuelo, la captura de imágenes de calidad y el procesamiento fotogramétrico para la generación de productos derivados (ortomosaicos, modelos digitales de superficie, nubes de puntos).</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">2</div>
+                                <div>
+                                    <h4>Drones para la supervisión y control de operaciones</h4>
+                                    <p>Enseñamos técnicas específicas para el uso de drones en el monitoreo de operaciones forestales como preparación del terreno, cosecha y transporte. El curso incluye planificación de misiones de vigilancia, captura e interpretación de imágenes para control operacional, elaboración de informes de seguimiento y estrategias para la integración de la información obtenida en los sistemas de gestión existentes.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">3</div>
+                                <div>
+                                    <h4>Sensores remotos satelitales para el seguimiento forestal</h4>
+                                    <p>Proporcionamos formación especializada en la selección, adquisición, procesamiento e interpretación de imágenes satelitales para el monitoreo de cultivos forestales y operaciones. Los participantes aprenden a trabajar con diferentes tipos de sensores (ópticos, radar, LiDAR), realizar correcciones y mejoras de imágenes, aplicar índices de vegetación específicos y desarrollar flujos de trabajo eficientes para el análisis multitemporal.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">4</div>
+                                <div>
+                                    <h4>Sistemas de Información Geográfica aplicados</h4>
+                                    <p>Capacitamos a profesionales forestales en el uso de herramientas SIG para la gestión, análisis y visualización de información espacial. Nuestro enfoque se centra en aplicaciones prácticas para el sector forestal, como la cartografía de rodales, el análisis de accesibilidad, la planificación de operaciones, la gestión de patrimonio forestal y el desarrollo de sistemas de apoyo a la decisión basados en información geoespacial.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">5</div>
+                                <div>
+                                    <h4>Herramientas de Inteligencia Artificial en el trabajo forestal</h4>
+                                    <p>Introducimos a los profesionales forestales en el empleo de técnicas de inteligencia artificial y aprendizaje automático para resolver problemas cotidianos del sector. El curso abarca desde fundamentos básicos hasta aplicaciones prácticas como la clasificación automática de imágenes, la detección de árboles, la estimación de parámetros forestales mediante algoritmos de aprendizaje profundo y la automatización de tareas rutinarias.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-features">
+                        <h3>Formación técnica y gestión</h3>
+                        <div class="service-feature-list">
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">1</div>
+                                <div>
+                                    <h4>Estadística y gestión de datos forestales</h4>
+                                    <p>Capacitamos a profesionales en los fundamentos estadísticos y las herramientas prácticas para el diseño, implementación y análisis de inventarios forestales y otros relevamientos de campo. El programa incluye técnicas de muestreo, análisis exploratorio de datos, inferencia estadística, modelización de variables forestales y visualización efectiva de resultados mediante software especializado.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">2</div>
+                                <div>
+                                    <h4>Análisis de costos forestales para mandos medios</h4>
+                                    <p>Proporcionamos a supervisores y gerentes de nivel medio las herramientas conceptuales y prácticas para comprender, analizar y gestionar eficientemente los costos de operaciones forestales. El curso abarca estructura de costos, análisis de productividad, evaluación de alternativas operativas, presupuestación y control, y técnicas para la identificación de oportunidades de mejora económica.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">3</div>
+                                <div>
+                                    <h4>Buenas prácticas en tareas silvícolas para operarios</h4>
+                                    <p>Formamos a personal operativo en técnicas y procedimientos óptimos para la ejecución de actividades silvícolas como plantación, poda, raleo y control de malezas. El programa enfatiza la importancia de la calidad en cada intervención, el uso seguro y eficiente de herramientas, la minimización del impacto ambiental y el cumplimiento de estándares técnicos establecidos por la empresa.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">4</div>
+                                <div>
+                                    <h4>Gestión eficiente de datos para la toma de decisiones</h4>
+                                    <p>Capacitamos a profesionales forestales en la recopilación, organización, análisis y visualización de datos para fundamentar decisiones operativas y estratégicas. Los participantes aprenden a diseñar sistemas de recolección de datos, implementar bases de datos estructuradas, realizar análisis integrados y desarrollar informes ejecutivos que faciliten la toma de decisiones en todos los niveles de la organización.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature-item">
+                                <div class="feature-item-icon">5</div>
+                                <div>
+                                    <h4>Comunicación técnica y presentación de resultados</h4>
+                                    <p>Desarrollamos habilidades para la comunicación efectiva de información técnica forestal a diferentes audiencias. El curso abarca la estructuración lógica de informes, la selección y diseño de elementos visuales (gráficos, mapas, diagramas), técnicas de presentación oral y estrategias para adaptar el mensaje a las necesidades y perfil de los destinatarios.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Galería de imágenes -->
+                    <div id="gallery-slideshow" style="height: 350px; margin: 40px 0; border-radius: 5px; overflow: hidden;">
+                        <div class="slide active" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                        <div class="slide" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                        <div class="slide" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                        <div class="slide" style="background-image: url('/api/placeholder/900/350'); background-position: center; background-size: cover;"></div>
+                    </div>
+
+                    <div class="service-cta">
+                        <h3>¿Busca desarrollar capacidades técnicas en su equipo forestal?</h3>
+                        <p>Contacte con nosotros para diseñar un programa de capacitación adaptado a las necesidades específicas de su organización.</p>
+                        <a href="index.html#contacto" class="btn">Solicitar propuesta formativa</a>
+                    </div>
+                </div>
+                
+                <div class="service-sidebar">
+                    <h3>Modalidades formativas</h3>
+                    <p>Adaptamos nuestros programas a sus necesidades:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Cursos presenciales intensivos</li>
+                        <li>Formación mixta (teórico-práctica)</li>
+                        <li>Talleres prácticos en terreno</li>
+                        <li>Sesiones virtuales interactivas</li>
+                        <li>Tutorías personalizadas</li>
+                        <li>Acompañamiento a largo plazo</li>
+                    </ul>
+                    
+                    <h3>Beneficios de nuestra formación</h3>
+                    <p>Al elegirnos como socio formativo, usted obtiene:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Contenidos actualizados y relevantes</li>
+                        <li>Enfoque práctico y aplicado</li>
+                        <li>Instructores con experiencia real</li>
+                        <li>Materiales didácticos especializados</li>
+                        <li>Seguimiento post-formación</li>
+                        <li>Certificación reconocida en el sector</li>
+                    </ul>
+                    
+                    <h3>¿Para quién están diseñados?</h3>
+                    <p>Nuestros programas son ideales para:</p>
+                    <ul style="margin-left: 20px;">
+                        <li>Ingenieros y técnicos forestales</li>
+                        <li>Supervisores y capataces</li>
+                        <li>Operarios especializados</li>
+                        <li>Gerentes de operaciones</li>
+                        <li>Responsables de planificación</li>
+                        <li>Profesionales de gestión ambiental</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>DendroIngeniería</h3>
+                    <ul>
+                        <li><a href="index.html#nosotros">Sobre nosotros</a></li>
+                        <li><a href="index.html#equipo">Nuestro equipo</a></li>
+                        <li><a href="#">Trabajos realizados</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="planificacion-page.html">Forestación de precisión</a></li>
+                        <li><a href="cartografia-page.html">Cartografía y Análisis Espacial</a></li>
+                        <li><a href="monitoreo-page.html">Monitoreo de Plantaciones</a></li>
+                        <li><a href="operaciones-page.html">Optimización de Operaciones</a></li>
+                        <li><a href="proyectos-ambientales-page.html">Proyectos Ambientales y Captura de Carbono</a></li>
+                        <li><a href="formacion-page.html">Formación y Capacitación</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="mailto:info@dendroingenieria.com">info@dendroingenieria.com</a></li>
+                        <li><a href="tel:+5491112345678">+54 3773 540155</a></li>
+                        <li>Mercedes - Corrientes, Argentina</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 DendroIngeniería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
